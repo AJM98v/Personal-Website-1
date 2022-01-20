@@ -1,0 +1,154 @@
+@media screen and (max-width: 970px) {
+    header .container {
+        height: fit-content;
+        width: fit-content;
+    }
+    .Service{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .Service .ServiceAbout{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .Service .Service-items{
+        width: 90%;
+        margin: 10px auto;
+        grid-template-columns: auto auto auto auto;
+    }
+    .Service-items .SItem{
+        width: 210px;
+        height: 210px;
+    }
+    .SItem img{
+        width: 75px;
+        height: 75px;
+    }
+    .SItem h4{
+        font-size: 18px;
+    }
+    .SItem p{
+        font-size: 10px;
+    }
+
+}
+@media screen and (max-width: 900px){
+    .Service .Service-items {
+        width: 90%;
+        margin: 10px auto;
+        grid-template-columns: auto auto;
+    }
+    .Service-items .SItem{
+        width: 350px;
+        height: 200px;
+    }
+    .SItem p{
+        padding: 10px;
+    }
+    .AboutMe {
+        height: fit-content;
+    }
+    .AboutMe p{
+        font-size: 12px;
+    }
+    .MyWork{
+        height: fit-content;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
+    .MyWork .slider{
+        flex-wrap: wrap;
+    }
+    .slider .slide{
+        margin: 10px;
+    }
+
+    .slider .next , .prev{
+        display: none;
+    }
+    .MyWork button{
+        width: 70%;
+    }
+    .MyWork button:hover{
+        width: 80%;
+    }
+
+}
+@media screen and (max-width: 750px) {
+    .ServiceAbout p{
+        font-size: 13px
+    }
+    .Service .Service-items{
+        margin: 25px auto;
+    }
+    .Service-items .SItem{
+        width: 270px;
+        height: 210px;
+    }
+    .ContactMe{
+        grid-template-columns: 100%;
+        height: fit-content;
+    }
+
+
+}
+
+@media screen and (max-width: 640px) {
+    .AboutMe{
+        grid-template-columns: auto;
+    }
+    .Service .Service-items{
+        grid-template-columns: auto auto;
+    }
+    .Service-items .SItem{
+        width: unset;
+    }
+    .Navigation .topNav{
+        display: none;
+    }
+    header .mobileNav{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .container h1{
+        font-size: 25px;
+    }
+    .container button{
+        margin: 5px;
+        font-size: 12px;
+    }
+    .socialMedia a span{
+        font-size: 1.5em;
+    }
+    .Service .Service-items{
+        grid-template-columns: auto;
+    }
+    .Service-items .SItem{
+        width: 310px;
+    }
+
+
+}
+@media screen and (max-width: 440px){
+    .ContactMe .Contact-info p{
+        grid-template-columns: auto;
+    }
+    .Contact-info p span{
+        margin: 5px;
+    }
+    header .container{
+        flex-direction: column;
+    }
+    .container h1{
+        font-size: 23px;
+    }
+    .container button{
+        width: 50%;
+    }
+}

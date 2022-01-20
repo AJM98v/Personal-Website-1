@@ -1,0 +1,622 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(10,10,10,.8);
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(244,244,244,.8);
+    border-radius: 3px;
+}
+
+@font-face {
+    font-family: yekan;
+    src: url("../Fonts/Yekan.ttf") format("truetype");
+    src: url("../Fonts/Yekan.woff") format("woff");
+}
+
+@font-face {
+    font-family: yazir;
+    src: url("../Fonts/Vazir-Medium-FD.ttf") format("truetype");
+    src: url("../Fonts/Vazir-Medium-FD.woff") format("woff");
+}
+
+@font-face {
+    font-family: oswald;
+    src: url("../Fonts/oswald.regular.ttf") format("truetype");
+
+}
+@font-face {
+    font-family: sora b;
+    src: url("../Fonts/Sora-Bold.ttf")format("truetype");
+}
+
+body {
+    font-family: yekan, sans-serif;
+    direction: rtl;
+
+
+}
+
+button {
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 17px;
+    background-color: #060d2a;
+    color: white;
+    font-family: yazir, sans-serif;
+    cursor: pointer;
+    transition: all ease .5s;
+    border: none;
+
+}
+
+button:hover {
+    background-color: #040481;
+    box-shadow: 0 4px 16px rgba(10, 10, 10, .8);
+
+
+}
+
+header {
+    position: relative;
+    height: 500px;
+    background-image: url("../Image/pexels-cottonbro-5483064.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.Navigation {
+}
+
+.Navigation .topNav {
+    display: flex;
+    list-style: none;
+    padding: 10px 40px;
+}
+
+.topNav li {
+    padding-left: 30px;
+    cursor: pointer;
+
+}
+
+.topNav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+    position: relative;
+    opacity: .7;
+
+
+}
+
+.topNav li a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    top: 35px;
+    left: 0;
+    margin: 0 auto;
+    /* color: white; */
+    background-color: white;
+    /* z-index: 10; */
+    transition: all ease .5s;
+}
+
+.topNav li a:hover:after {
+    width: 100%;
+}
+
+.topNav li a:hover {
+    opacity: 1;
+}
+
+header .mobileNav{
+    display: none;
+    position: fixed;
+    top: 13px;
+    right: 23px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+    background-color: black;
+    padding: 7px;
+    border-radius: 5px;
+
+}
+.mobileNav div{
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 2px;
+    transition: all .5s ease;
+
+
+}
+.change div:nth-of-type(1){
+    transform: translate(0px, 7px) rotate(45deg);
+}
+.change div:nth-of-type(2){
+    opacity: 0;
+}
+.change div:nth-of-type(3){
+    transform: translate(0px, -8px) rotate(-45deg);
+}
+
+header #mNav-content{
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 55px;
+    right: 22px;
+    width: 40%;
+    z-index: 100;
+    border-radius: 5px;
+    animation: fadeIn .5s ease;
+}
+@keyframes fadeIn {
+    0%{ transform: scale(0)}
+    100%{transform: scale(1)}
+}
+#mNav-content ul{
+    display: grid;
+    list-style: none;
+
+}
+#mNav-content ul  li{
+
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#mNav-content ul  li:hover{
+    background-color: white;
+
+}
+#mNav-content ul  li:hover a{
+    color:black;
+}
+#mNav-content ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 50px;
+    height: 40px;
+
+}
+
+header .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+}
+
+.container h1 span {
+    color: #4a42ff;
+}
+
+.container h4 {
+    width: 100%;
+    text-align: center;
+    font-family: oswald, sans-serif;
+    letter-spacing: 1px;
+}
+
+.container button {
+    width: 30%;
+    margin: 10px;
+}
+
+.socialMedia {
+    width: 100%;
+    text-align: center;
+}
+
+.socialMedia span {
+    font-size: 2em;
+    color: #4a42ff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all ease .5s;
+}
+
+.socialMedia span:hover {
+
+    color: #112078;
+}
+
+
+.Service {
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding: 50px 10px;
+    /*background-image: url("../Image/pexels-johannes-plenio-1103970.png");*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+
+
+}
+
+.Service .ServiceAbout {
+    width: 40%;
+    padding: 0 30px;
+
+}
+
+.ServiceAbout h2 {
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.ServiceAbout p {
+    color: black;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.ServiceAbout button {
+    margin-top: 20px;
+    display: block;
+    margin-right: auto;
+    padding: 8px 20px;
+}
+
+.Service .Service-items {
+    width: 40%;
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Service-items .SItem {
+    width: 250px;
+    height: 250px;
+    background-color: #060d2a;
+    box-shadow: 0 4px 16px 0 rgba(10, 10, 10, .6);
+    text-align: center;
+    cursor: pointer;
+    transition: all ease .5s;
+
+}
+
+.Service-items .SItem:hover {
+    transform: scale(1.05);
+}
+
+.SItem h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.SItem p {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.AboutMe {
+    height: 400px;
+    padding: 50px 60px;
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns:auto auto;
+    grid-template-rows: 50px auto;
+    justify-items: stretch;
+    background-color: #f0f0f0;
+
+
+}
+
+.AboutMe img {
+    width: 250px;
+    height: 250px;
+    transform: rotateY(180deg);
+    grid-row: 1/ span 2;
+    border-radius: 50%;
+}
+
+.AboutMe h2 {
+    font-size: 22px;
+    color: black;
+    padding: 0 20px;
+}
+
+.AboutMe p {
+    color: black;
+    font-size: 14px;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.AboutMe p button {
+    display: block;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 120px;
+    margin-right: auto;
+}
+
+.MyWork {
+    height: 500px;
+    padding: 0 40px;
+    /*background-image: url("../Image/pexels-picjumbocom-196644-Recovered.png");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+
+}
+
+.MyWork h2 {
+    color: #060d2a;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+.MyWork .slider {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.slider .slide {
+    width: 220px;
+    height: 280px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+
+}
+.slide .slide-inner{
+    transform-style: preserve-3d;
+    transition: all .6s ease;
+    width: 100%;
+    height: 100%;
+
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide:hover .slide-inner{
+    transform: rotateY(180deg);
+
+}
+.slide-inner .slide-front{
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .slide-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f46af;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+    overflow: hidden;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all ease .6s;
+
+}
+
+.slide-back h3 {
+    color: white;
+
+}
+
+.slide-back p {
+    color: white;
+    font-size: 13px;
+    text-align: justify;
+
+}
+
+.slide:hover .slide-back {
+    transform: rotateY(180deg);
+}
+
+
+.MyWork button {
+    display: block;
+    width: 25%;
+    margin: 20px auto;
+    transition: all ease .5s;
+}
+
+.MyWork button:hover {
+    width: 30%;
+}
+
+.slide-back button {
+    background-color: #040481;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+
+
+}
+
+.slide-back button:hover {
+    width: 80%;
+}
+
+.slider .prev, .next {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(10, 10, 10, .5);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.slider .next {
+    right: 0;
+    left: unset;
+}
+
+
+.ContactMe {
+    height: 350px;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    padding: 50px 50px;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+
+}
+
+.ContactMe .Contact-info {
+    margin: 20px;
+
+}
+
+.Contact-info h3 {
+    color: black;
+    font-size: 22px;
+    margin: 10px auto;
+}
+
+.Contact-info p {
+    color: black;
+    text-align: justify;
+    padding: 10px;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+}
+.Contact-info p span{
+    font-family: "sora b",yazir,sans-serif;
+}
+.Contact-info p img{
+    width: 30px;
+    height: 30px;
+}
+
+.ContactMe .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+    height: 275px;
+}
+
+.contact label {
+    color: black;
+    font-size: 16px;
+    width: 20%;
+
+}
+
+.contact input {
+    width: 75%;
+    margin-right: 10px;;
+    background-color: rgba(244, 244, 244, .8);
+    font-size: 12px;
+    font-family: yekan, sans-serif;
+    padding: 5px;
+    outline: #060d2a;
+    border: solid 2px black;
+    border-radius: 3px;
+
+
+}
+
+.contact textarea {
+    width: 75%;
+    margin-right: 10px;;
+    height: 100px;
+    background-color: rgba(244, 244, 244, .8);
+    font-size: 12px;
+    font-family: yekan, sans-serif;
+    padding: 5px;
+    outline: #060d2a;
+    border: solid 2px black;
+    border-radius: 3px;
+
+}
+
+.contact button {
+    display: block;
+    width: 110px;
+    margin: 5px auto 0 5px;
+    font-size: 15px;
+    padding: 5px 10px
+}
+
+
+footer .copyRight {
+    text-align: center;
+    color: white;
+    background-color: #000010;
+}
+
+.copyRight p {
+    color: rgba(244, 244, 244, .5);
+}
+
+.copyRight p span {
+    padding: 0 5px;
+    color: rgba(244, 244, 244, 1);
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+
+}
